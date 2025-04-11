@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.3.26)  11 APR 2025 11:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.3.26)  11 APR 2025 11:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -504,30 +504,11 @@ Underfull \hbox (badness 1072) in paragraph at lines 130--131
 
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 134.
-
-Package natbib Warning: Citation `Gusfield:97' on page 1 undefined on input lin
-e 138.
-
-
-Package natbib Warning: Citation `Gusfield:97' on page 1 undefined on input lin
-e 139.
-
-
-LaTeX Warning: File `zipf.png' not found on input line 151.
-
-
-! Package pdftex.def Error: File `zipf.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.151 ...udegraphics[width=\columnwidth]{zipf.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-No file acl_latex.bbl.
+<graph1.png, id=92, 416.2752pt x 315.0972pt>
+File: graph1.png Graphic file (type png)
+<use graph1.png>
+Package pdftex.def Info: graph1.png  used on input line 173.
+(pdftex.def)             Requested size: 219.08614pt x 165.83717pt.
 
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fon
@@ -538,13 +519,39 @@ t1-0.enc}
 
 {/usr/share/texmf-dist/fonts/enc/dvips/inconsolata/i4-ts1.enc}]
 
-Package natbib Warning: There were undefined citations.
+
+Overfull \hbox (9.03476pt too wide) in paragraph at lines 203--203
+[] \T1/zi4/m/n/10.95 print(bigram_counter.most_common()[-10:])[] 
+ []
+
+<graph2.png, id=113, 613.5723pt x 398.9304pt>
+File: graph2.png Graphic file (type png)
+<use graph2.png>
+Package pdftex.def Info: graph2.png  used on input line 210.
+(pdftex.def)             Requested size: 219.08614pt x 142.44609pt.
+
+Overfull \hbox (61.92244pt too wide) in paragraph at lines 229--229
+[]  \T1/zi4/m/n/10.95 # First, we iterate over all examples in the dataset:[] 
+ []
+
+
+Overfull \hbox (19.95123pt too wide) in paragraph at lines 229--229
+[] \T1/zi4/m/n/10.95 # We then get the sample text from the "clean"[] 
+ []
 
 
 
+[2 <./graph1.png> <./graph2.png>]
+Overfull \hbox (32.72993pt too wide) in paragraph at lines 229--229
+[] \T1/zi4/m/n/10.95 # Then we iterate over the texts\TS1/zi4/m/n/10.95 ' \T1/z
+i4/m/n/10.95 characters and[] 
+ []
+
+(./acl_latex.bbl)
 
 
-[2
+
+[3
 
 ] (./acl_latex.aux)
  ***********
@@ -552,23 +559,24 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `acl_latex.out' has not changed.
-(rerunfilecheck)             Checksum: 5F2803EAC5DA579BDAEE6E5FBDB2DBAA;2874.
+(rerunfilecheck)             Checksum: 83F3F42D2397237D2F6935977AB525A3;5844.
  ) 
 Here is how much of TeX's memory you used:
- 14064 strings out of 475171
- 224341 string characters out of 5767095
- 670552 words of memory out of 5000000
- 36723 multiletter control sequences out of 15000+600000
- 598875 words of font info for 165 fonts, out of 8000000 for 9000
+ 14134 strings out of 475171
+ 225080 string characters out of 5767095
+ 672579 words of memory out of 5000000
+ 36726 multiletter control sequences out of 15000+600000
+ 603917 words of font info for 195 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 90i,10n,93p,1006b,449s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,10n,93p,1006b,670s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></
 usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fo
-nts/type1/urw/times/utmr8a.pfb>
-Output written on acl_latex.pdf (2 pages, 57541 bytes).
+nts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utm
+ri8a.pfb>
+Output written on acl_latex.pdf (3 pages, 113456 bytes).
 PDF statistics:
- 99 PDF objects out of 1000 (max. 8388607)
- 87 compressed objects within 1 object stream
- 19 named destinations out of 1000 (max. 500000)
- 47201 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 164 PDF objects out of 1000 (max. 8388607)
+ 144 compressed objects within 2 object streams
+ 37 named destinations out of 1000 (max. 500000)
+ 51371 words of extra memory for PDF output out of 51595 (max. 10000000)
 

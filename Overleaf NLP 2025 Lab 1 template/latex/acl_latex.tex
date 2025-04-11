@@ -148,7 +148,7 @@ Here is the example of a table. Each table and figure should have a reference fr
 
 Figures can be added by first uploading the image file to overleaf and then using the following command (and reference it using Figure~\ref{fig:zipf}):
 \begin{figure}[t]
-  \includegraphics[width=\columnwidth]{zipf.png}
+
   \caption{This is a caption of the figure.}
   \label{fig:zipf}
 \end{figure}
@@ -157,29 +157,76 @@ Figures can be added by first uploading the image file to overleaf and then usin
 
 Your answers here.
 
-% \subsection{What is the size of the training, test and validation datasets?}
+\subsection{What is the size of the training, test and validation datasets?}
+The training set contains 45000 rows, the testing dataset contains 50000 rows, and the testing dataset contains 5000 rows. 
 
-% Your answer here
+\subsection{What are the top 5 most frequent emojis in the validation dataset?}
+\begin{enumerate}
+	\item Heart
+	\item Heart eyes
+	\item Laughing 
+	\item Stars 
+	\item Fire 
+\end{enumerate}
+ \subsection{Compare the distributions of labels (emojis) between training and validation datasets.}
+\begin{figure}[h]
+	\includegraphics[width=\linewidth]{graph1.png}
+	\caption{The distribution of labels between training and validation datasets}
+\end{figure}
+From the figure we can see, that the distribution of emojis is not significantly different in any of the two datasets
+\subsection{How many examples with the "fire" emoji are in the training dataset?}
+To solve this exercise, we just need to query the dataset. From the huggingface website, we can see, that the label of the fire emoji is 4. Therefore we just need to call
+\begin{verbatim}
+	.query("label == 4")
+\end{verbatim}
+on our training dataset. When we do this, we can see that we have 2146 occurences of the fire emoji in the training dataset.
 
-% \subsection{What are the top 5 most frequent emojis in the validation dataset?}
-
-% \subsection{Compare the distributions of labels (emojis) between training and validation datasets.}
-
-% \subsection{How many examples with the "fire" emoji are in the training dataset?}
-
-% \subsection{What is the average length (in characters) of the tweets in the training dataset?}
+\subsection{What is the average length (in characters) of the tweets in the training dataset?}
+For this, we just need to take the "text\_length" column of the training dataset, and then call the inbuilt mean function of pandas on it. When running the code, we get 71.01691111 average tweet length.
 
 \section{Exercise 2: Write the text cleaning function}
 
 \section{Exercise 3: Build the vocabulary}
 
 \section{Exercise 4: Frequency of pairs of words}
+\subsection{Most and Least common pairs}
+\begin{verbatim}
+	bigram_counter = Counter()
+	for example in tweet_ds['train']:
+	words = example["clean"].split()
+	bigrams = zip(words[:-1], words[1:])
+	bigram_counter.update(bigrams)
+	print("The most common bigrams: ")
+	print(bigram_counter.most_common(10))
+	print("\nThe least common bigrams:")
+	print(bigram_counter.most_common()[-10:])
+\end{verbatim}
+Here we just initialize a Counter object from the Python collections library. We then iterate over the training dataset, split the string on whitespace, then use the zip iterator, to get our bigrams. We then push our bigrams into the counter object. From there we can Poll the  most and least common bigrams, as seen in the code. 
 
+\subsection{How many pairs occur only once?}
+To count single occurences, we need to iterate over our Counter object again, and then count the items in it. If the count of any item is equal to one, we add it to the sum, which is our output. When we calculate this, we get that we have 240574 bigrams that only occur once. 
+\subsection{Distribution plot of the frequencies}
+\begin{figure}[h]
+	\includegraphics[width=\linewidth]{graph2.png}
+	\caption{Distribution plot of the bigram frequencies in a log-log scale}
+\end{figure}
 \section{Exercise 5: Tokenize the dataset}
 
 \section{Exercise 6: Questions about the tokenization}
 
 \section{Exercise 7: Counting the characters}
+Here we again make use of the Counter object. We iterate over our dataset, take the "clean" column, then we iterate over the characters in that column and increase the counter for each character we get. 
+\begin{verbatim}
+	 # First, we iterate over all examples in the dataset:
+	for example in dataset:
+	# We then get the sample text from the "clean"
+	# column of the dataset:
+	text = example['clean']
+	# Then we iterate over the texts' characters and
+	# count each character individually:
+	for char in text:
+	char_counter[char] += 1
+\end{verbatim}
 
 \section{Exercise 8: Calculate the frequency statistics of adjacent symbol pairs}
 
